@@ -12,7 +12,20 @@ import {
   View
 } from 'react-native';
 
-export default class FirstProject extends Component {
+class FirstProject extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      welcome: ""
+    }
+    this.buttonClicked = this.buttonClicked.bind(this)
+  }
+
+  buttonClicked() {
+    console.log("Welcome to Tuber!");
+    
+  }
+
   render() {
     return (
       <View style={styles.container}>
